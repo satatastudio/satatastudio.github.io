@@ -35,98 +35,35 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            color: var(--primary-dark);
-            font-weight: 600;
-        }
-
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--primary-dark); font-weight: 600; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
         /* --- Header & Navigation --- */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
-            z-index: 1000;
+            position: fixed; top: 0; width: 100%; padding: 20px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            transition: var(--transition); z-index: 1000;
             background-color: rgba(18, 18, 18, 0.9);
         }
-
-        header.scrolled {
-            padding: 15px 5%;
-            background-color: rgba(18, 18, 18, 0.98);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text-light);
-            letter-spacing: 1px;
-        }
-
+        header.scrolled { padding: 15px 5%; background-color: rgba(18, 18, 18, 0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .logo { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--text-light); letter-spacing: 1px; }
         .logo span { color: var(--primary-gold); }
-
         nav ul { display: flex; gap: 30px; }
-
-        nav a {
-            color: var(--text-light);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-gold);
-            transition: var(--transition);
-        }
-
+        nav a { color: var(--text-light); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; position: relative; transition: var(--transition); }
+        nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background-color: var(--primary-gold); transition: var(--transition); }
         nav a:hover::after { width: 100%; }
 
         /* --- Hero Section --- */
         .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+            height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
             color: var(--text-light);
         }
-
         .hero-content { max-width: 800px; animation: fadeIn 1.5s ease-out; }
         .hero h1 { font-size: 56px; color: var(--text-light); margin-bottom: 20px; line-height: 1.2; }
         .hero p { font-size: 18px; font-weight: 300; margin-bottom: 40px; color: #e0e0e0; }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: transparent;
-            color: var(--primary-gold);
-            border: 1px solid var(--primary-gold);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
+        .btn-primary { display: inline-block; padding: 15px 40px; background-color: transparent; color: var(--primary-gold); border: 1px solid var(--primary-gold); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; transition: var(--transition); cursor: pointer; }
         .btn-primary:hover { background-color: var(--primary-gold); color: var(--primary-dark); }
 
         /* --- Section Titles --- */
@@ -136,111 +73,42 @@
 
         /* --- Services Section (Accordion) --- */
         .services { padding: 100px 5%; background-color: var(--bg-light); }
-        
-        .accordion-container { max-width: 800px; margin: 0 auto; }
-        
-        .accordion-item {
-            background: #fff;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-
+        .accordion-container { max-width: 900px; margin: 0 auto; }
+        .accordion-item { background: #fff; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); overflow: hidden; }
         .accordion-header {
-            width: 100%;
-            padding: 25px 30px;
-            background: #fff;
-            border: none;
-            outline: none;
-            text-align: left;
-            font-family: var(--font-heading);
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--primary-dark);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
+            width: 100%; padding: 25px 30px; background: #fff; border: none; outline: none; text-align: left;
+            font-family: var(--font-heading); font-size: 22px; font-weight: 600; color: var(--primary-dark);
+            cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition);
         }
-
         .accordion-header:hover { color: var(--primary-gold); }
-        .accordion-header::after {
-            content: '+';
-            font-size: 28px;
-            font-weight: 300;
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-item.active .accordion-header::after {
-            content: '−';
-            transform: rotate(180deg);
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            background-color: #fafafa;
-        }
-
-        .accordion-content-inner {
-            padding: 0 30px 30px 30px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .accordion-content img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
+        .accordion-header::after { content: '+'; font-size: 28px; font-weight: 300; transition: transform 0.3s ease; }
+        .accordion-item.active .accordion-header::after { content: '−'; transform: rotate(180deg); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fafafa; }
+        .accordion-content-inner { padding: 0 30px 30px 30px; display: flex; gap: 30px; align-items: center; }
+        .accordion-content img { width: 200px; height: 200px; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .accordion-text p { font-size: 15px; color: #555; margin-bottom: 10px; }
-        .accordion-text ul { list-style-type: disc; padding-left: 20px; font-size: 14px; color: #555; }
+        .accordion-text ul { list-style-type: disc; padding-left: 20px; font-size: 15px; color: #333; font-weight: 500; }
+        .price-tag { color: var(--primary-gold); font-weight: 700; font-size: 16px; }
+
+        /* --- Creative Designs Section (New) --- */
+        .designs { padding: 100px 5%; background-color: var(--primary-dark); color: var(--text-light); }
+        .designs .section-title h2 { color: var(--text-light); }
+        .designs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .design-card { background: #1a1a1a; border-radius: 4px; overflow: hidden; transition: var(--transition); border: 1px solid rgba(255,255,255,0.05); }
+        .design-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); box-shadow: 0 15px 40px rgba(197, 160, 89, 0.2); }
+        .design-card img { width: 100%; height: 250px; object-fit: cover; }
+        .design-info { padding: 25px; }
+        .design-info h3 { color: var(--primary-gold); font-size: 22px; margin-bottom: 10px; }
+        .design-info p { color: #ccc; font-size: 14px; }
 
         /* --- Portfolio Section --- */
         .portfolio { padding: 100px 5%; background-color: #fff; }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
-            height: 300px;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(18, 18, 18, 0.7);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 4px; height: 300px; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .gallery-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(18, 18, 18, 0.7); display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: var(--transition); }
         .gallery-overlay h3 { color: var(--primary-gold); font-size: 24px; margin-bottom: 5px; transform: translateY(20px); transition: var(--transition); }
         .gallery-overlay p { color: #fff; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; transform: translateY(20px); transition: var(--transition); }
-
         .gallery-item:hover img { transform: scale(1.1); }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
         .gallery-item:hover .gallery-overlay h3, .gallery-item:hover .gallery-overlay p { transform: translateY(0); }
@@ -248,66 +116,21 @@
         /* --- Contact Section --- */
         .contact { padding: 100px 5%; background-color: var(--primary-dark); color: var(--text-light); }
         .contact .section-title h2 { color: var(--text-light); }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1000px; margin: 0 auto; }
         .contact-info h3 { color: var(--primary-gold); font-size: 24px; margin-bottom: 20px; }
         .contact-info p { margin-bottom: 15px; color: #ccc; }
-        
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-        
+        .contact-detail { display: flex; align-items: center; margin-bottom: 20px; font-size: 16px; }
         .contact-detail span { color: var(--primary-gold); margin-right: 15px; font-weight: bold; font-size: 20px; }
         .contact-detail a { color: #fff; transition: var(--transition); }
         .contact-detail a:hover { color: var(--primary-gold); }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: #fff;
-            font-family: var(--font-body);
-            outline: none;
-            transition: var(--transition);
-        }
-
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-family: var(--font-body); outline: none; transition: var(--transition); }
         .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary-gold); }
         .contact-form button { width: 100%; }
 
         /* --- Google Map Section --- */
-        .map-container {
-            max-width: 1000px;
-            margin: 50px auto 0;
-            border-radius: 4px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            display: block;
-            filter: grayscale(20%) contrast(110%); /* Slight filter for premium look */
-            transition: var(--transition);
-        }
-
-        .map-container:hover iframe {
-            filter: grayscale(0%) contrast(100%);
-        }
+        .map-container { max-width: 1000px; margin: 50px auto 0; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; }
+        .map-container iframe { width: 100%; height: 400px; display: block; filter: grayscale(20%) contrast(110%); transition: var(--transition); }
+        .map-container:hover iframe { filter: grayscale(0%) contrast(100%); }
 
         /* --- Footer --- */
         footer { background-color: #0a0a0a; color: #888; text-align: center; padding: 30px 20px; font-size: 14px; }
@@ -315,7 +138,6 @@
 
         /* --- Animations & Responsive --- */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
         @media (max-width: 768px) {
             .hero h1 { font-size: 38px; }
             nav ul { display: none; }
@@ -335,6 +157,7 @@
         <nav>
             <ul>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#designs">Designs</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -350,7 +173,7 @@
         </div>
     </section>
 
-    <!-- Services Section (Accordion with Details) -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-title">
             <h2>Our Premium Services</h2>
@@ -360,23 +183,59 @@
         <div class="accordion-container">
             <!-- Service 1: Mug Print -->
             <div class="accordion-item">
-                <button class="accordion-header">Mug Print</button>
+                <button class="accordion-header">Mug Print & Customization</button>
                 <div class="accordion-content">
                     <div class="accordion-content-inner">
                         <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=500&auto=format&fit=crop" alt="Mug Print">
                         <div class="accordion-text">
-                            <p>Personalize your moments with our high-quality ceramic mug printing. Perfect for gifts, corporate giveaways, or personal keepsakes.</p>
+                            <p>Personalize your moments with our high-quality ceramic mug printing. Perfect for gifts and corporate giveaways.</p>
                             <ul>
-                                <li>Premium quality ceramic mugs</li>
+                                <li>Normal Mug Print: <span class="price-tag">400 Tk</span></li>
+                                <li>Magic Mug (Color Changing): <span class="price-tag">600 Tk</span></li>
                                 <li>Vibrant, long-lasting colors</li>
-                                <li>Custom text and photo options</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 2: Visa Photo Print -->
+            <!-- Service 2: Photo Frame -->
+            <div class="accordion-item">
+                <button class="accordion-header">Premium Photo Frames</button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <img src="https://images.unsplash.com/photo-1580136608267-1f44b6f8b4d8?q=80&w=500&auto=format&fit=crop" alt="Photo Frame">
+                        <div class="accordion-text">
+                            <p>Preserve your memories in elegant, high-quality frames. Custom sizes available for your perfect shot.</p>
+                            <ul>
+                                <li>10x12 Inch Frame: <span class="price-tag">400 Tk</span></li>
+                                <li>12x16 Inch Frame: <span class="price-tag">700 Tk</span></li>
+                                <li>Premium wood & metal finishes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Photo Album -->
+            <div class="accordion-item">
+                <button class="accordion-header">Photo Album</button>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=500&auto=format&fit=crop" alt="Photo Album">
+                        <div class="accordion-text">
+                            <p>Turn your digital photos into beautiful, tangible memories. Our albums are perfect for weddings, baby showers, and travel diaries.</p>
+                            <ul>
+                                <li>Premium leather and hardcover binding</li>
+                                <li>Archival-quality, thick photo paper</li>
+                                <li>Custom layouts and designs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Visa Photo -->
             <div class="accordion-item">
                 <button class="accordion-header">Any Country Visa Photo Print</button>
                 <div class="accordion-content">
@@ -393,40 +252,36 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Service 3: Photo Frame -->
-            <div class="accordion-item">
-                <button class="accordion-header">Photo Frame</button>
-                <div class="accordion-content">
-                    <div class="accordion-content-inner">
-                        <img src="https://images.unsplash.com/photo-1580136608267-1f44b6f8b4d8?q=80&w=500&auto=format&fit=crop" alt="Photo Frame">
-                        <div class="accordion-text">
-                            <p>Preserve your memories in elegant, high-quality frames. We offer a variety of styles to match your home or office decor.</p>
-                            <ul>
-                                <li>Premium wood, metal, and acrylic frames</li>
-                                <li>Custom sizes available</li>
-                                <li>Includes high-resolution photo printing</li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Creative Designs Section -->
+    <section class="designs" id="designs">
+        <div class="section-title">
+            <h2>Creative Photo Designs</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="designs-grid">
+            <div class="design-card">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop" alt="Birthday Design">
+                <div class="design-info">
+                    <h3>Birthday Designs</h3>
+                    <p>Custom birthday posters, banners, and photo frames to make their special day unforgettable.</p>
                 </div>
             </div>
-
-            <!-- Service 4: Photo Album -->
-            <div class="accordion-item">
-                <button class="accordion-header">Photo Album</button>
-                <div class="accordion-content">
-                    <div class="accordion-content-inner">
-                        <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=500&auto=format&fit=crop" alt="Photo Album">
-                        <div class="accordion-text">
-                            <p>Turn your digital photos into beautiful, tangible memories. Our albums are perfect for weddings, baby showers, and travel diaries.</p>
-                            <ul>
-                                <li>Premium leather and hardcover binding</li>
-                                <li>Archival-quality, thick photo paper</li>
-                                <li>Custom layouts and designs</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="design-card">
+                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=800&auto=format&fit=crop" alt="Photo Collage">
+                <div class="design-info">
+                    <h3>Photo Collage</h3>
+                    <p>Beautifully arranged collages of your favorite moments, perfect for wall decor or gifting.</p>
+                </div>
+            </div>
+            <div class="design-card">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop" alt="Moment Capture">
+                <div class="design-info">
+                    <h3>Moment Capture</h3>
+                    <p>Turn your candid and event photos into premium, magazine-style prints and designs.</p>
                 </div>
             </div>
         </div>
@@ -484,17 +339,17 @@
                 <p>We are here to bring your creative visions to life. Reach out to us for bookings, inquiries, or custom printing requests.</p>
                 
                 <div class="contact-detail">
-                    <span>&#9993;</span> <!-- Email Icon -->
+                    <span>&#9993;</span>
                     <a href="mailto:satatastudio37@gmail.com">satatastudio37@gmail.com</a>
                 </div>
                 
                 <div class="contact-detail">
-                    <span>&#128241;</span> <!-- Phone Icon -->
+                    <span>&#128241;</span>
                     <a href="tel:+8801605591000">01605591000</a>
                 </div>
                 
                 <div class="contact-detail">
-                    <span>&#128172;</span> <!-- WhatsApp Icon -->
+                    <span>&#128172;</span>
                     <a href="https://wa.me/8801605591000" target="_blank">WhatsApp Us</a>
                 </div>
             </div>
@@ -507,14 +362,9 @@
             </div>
         </div>
 
-        <!-- Live Google Map Integration -->
+        <!-- Live Google Map -->
         <div class="map-container">
-            <iframe 
-                src="https://maps.google.com/maps?q=23.0109358,91.3983598&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe src="https://maps.google.com/maps?q=23.0109358,91.3983598&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -548,21 +398,16 @@
 
         // 3. Accordion Logic for Services
         const accordions = document.querySelectorAll('.accordion-header');
-        
         accordions.forEach(acc => {
             acc.addEventListener('click', function() {
-                // Close all other open accordions
                 accordions.forEach(otherAcc => {
                     if (otherAcc !== this) {
                         otherAcc.classList.remove('active');
                         otherAcc.nextElementSibling.style.maxHeight = null;
                     }
                 });
-
-                // Toggle current accordion
                 this.classList.toggle('active');
                 const content = this.nextElementSibling;
-                
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
